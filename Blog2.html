@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jewelry Online Shop</title>
+    <link rel="stylesheet" href="style2.css" />
+
+    <!--import font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--swiper slider for product using swiper demo-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <div class="header-top-bar">
+        <span>Welcome to Ice Dream Jewelry</span>
+      </div>
+      <!-- Navigation -->
+      <nav class="navigation">
+        <!-- Logo -->
+        <a href="#" class="logo">
+          <img src="images/ICE_DREAM_LOGO_300x300.avif" alt="logo" />
+        </a>
+        <!--menu-button-->
+        <input type="checkbox" class="menu-btn" id="menu-btn" />
+        <label for="menu-btn" class="menu-icon">
+          <span class="nav-icon"></span>
+        </label>
+        <!-- Menu -->
+        <ul class="menu">
+          <li>
+            <a href="http://127.0.0.1:5500/Home.html" class="active">Home</a>
+          </li>
+          <li><a href="Category5.html">Category</a></li>
+          <li><a href="Products4.html">Products</a></li>
+          <li><a href="Testimonial3.html">Testimonials</a></li>
+          <li><a href="Blog2.html">Blog</a></li>
+        </ul>
+        <!-- Right Nav -->
+        <div class="right-nav">
+          <a href="#" class="nav-search">
+            <!-- Search icon using Font Awesome -->
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </a>
+          <a href="#" class="nav-user">
+            <!-- User icon using Font Awesome -->
+            <i class="fa-regular fa-user"></i>
+          </a>
+          <!-- Cart icon using Font Awesome -->
+          <a href="#" class="nav-cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span>0</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Blog Section -->
+    <section id="blog">
+      <!-- Heading -->
+      <div class="blog-heading">
+        <h3>Latest Blogs</h3>
+        <span>There are latest blog posts</span>
+      </div>
+
+      <div class="blog-container">
+        <!-- Blog Box1 -->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="images/image2.jpg" alt="blog" />
+          </div>
+          <div class="blog-text">
+            <span> 20 January 2024 / Jewelry</span>
+            <a href="#" class="blog-title">How to Style Silver Jewellery</a>
+            <p>
+              Did you know that in Australia the jewellery industry is worth
+              almost $3 billion annually? That's a lot of sparkles. If you're
+              one of the many women who love to accessorise with jewellery, you
+              know that the right piece can elevate any outfit and make you feel
+              confident and stylish.
+              <span class="dots">...</span>
+              <span class="more-text" style="display: none">
+                Silver jewellery in particular is a timeless and versatile
+                accessory that will add a touch of elegance and sophistication
+                to your look. However, knowing how to style and care for your
+                silver jewellery can be a challenge.
+              </span>
+            </p>
+            <a
+              href="javascript:void(0);"
+              onclick="toggleText(this)"
+              class="read-more"
+              >Read more</a
+            >
+          </div>
+        </div>
+
+        <!-- Blog Box2 -->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="images/image1.jpg" alt="blog" />
+          </div>
+          <div class="blog-text">
+            <span>12 February 2024 / Jewelry</span>
+            <a href="#" class="blog-title">Gift Ideas: Make it Meaningful</a>
+            <p>
+              A well-made piece of jewellery from a loved one can be a gift we
+              wear every day, with emotional ties to the person from whom it
+              came. Many are lucky enough to have pieces that have been passed
+              down through generations. The right piece can pick us up when
+              we’re down or can work like a protective shield; as though we
+              carry our loved ones with us. <span class="dots">...</span>
+              <span class="more-text" style="display: none">
+                This year for Christmas we recommend making it meaningful; chose
+                a gift that has a lot of thought behind it. Here are some
+                choices we’ve put together, including pieces from our latest
+                Australian Flora Range, inspired by stunning native flowers and
+                plants.
+              </span>
+            </p>
+            <a
+              href="javascript:void(0);"
+              onclick="toggleText(this)"
+              class="read-more"
+              >Read more</a
+            >
+          </div>
+        </div>
+
+        <!-- Blog Box3 -->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="images/image44.jpg" alt="blog" />
+          </div>
+          <div class="blog-text">
+            <span>15 March 2024 / Jewelry</span>
+            <a href="#" class="blog-title"
+              >How to wear different types of earrings</a
+            >
+            <p>
+              Did you know that people have been wearing earrings for thousands
+              of years? Over that time there have been all sorts of different
+              types of earrings created, many of which continue to be worn to
+              this day.
+              <span class="dots">...</span>
+              <span class="more-text" style="display: none">
+                When deciding which earring types you should wear with which
+                outfits it can be hard to choose. How do you know which type
+                will look good on you or best suit your outfit? Should you opt
+                for stud earrings or hoops? What about drop earrings or long
+                dangle earrings? Do you think you can get away with mismatched
+                earrings?
+              </span>
+            </p>
+            <a
+              href="javascript:void(0);"
+              onclick="toggleText(this)"
+              class="read-more"
+              >Read more</a
+            >
+          </div>
+        </div>
+
+        <!-- Blog Box4 -->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="images/image5.jpg" alt="blog" />
+          </div>
+          <div class="blog-text">
+            <span>26 May 2024 / Jewelry</span>
+            <a href="#" class="blog-title"
+              >How to Choose the Right Necklace Length</a
+            >
+            <p>
+              Are you trying to figure out how to choose the best necklace
+              length or chain length? Which lengths and style of necklaces with
+              pendant or chain necklaces will suit you and your neckline best?
+              <span class="dots">...</span>
+              <span class="more-text" style="display: none">
+                We know it can be tricky to work out. And we also know that
+                getting it right can make a big difference when you want to make
+                a style impact and look well put together.
+              </span>
+            </p>
+            <a
+              href="javascript:void(0);"
+              onclick="toggleText(this)"
+              class="read-more"
+              >Read more</a
+            >
+          </div>
+        </div>
+
+        <!-- Blog Box5 -->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="images/image55.jpg" alt="blog" />
+          </div>
+          <div class="blog-text">
+            <span>24 July 2024 / Jewelry</span>
+            <a href="#" class="blog-title"
+              >Which Should You Choose: Gold or Silver?</a
+            >
+            <p>
+              Wondering about whether to wear gold jewellery or silver jewellery
+              based on your skin or eye colouring (or to give as a gift to
+              someone)? Have you heard about 'rules' to follow when choosing
+              jewellery colours but you're not sure how to use them?
+              <span class="dots">...</span>
+              <span class="more-text" style="display: none">
+                Wearing Gold vs silver coloured jewellery has been a
+                long-debated topic and there's plenty of confusion around which
+                metal to choose to suit yourself, your budget and your sense of
+                style.
+              </span>
+            </p>
+            <a
+              href="javascript:void(0);"
+              onclick="toggleText(this)"
+              class="read-more"
+              >Read more</a
+            >
+          </div>
+        </div>
+
+        <!--Blog Box6-->
+        <div class="blog-box">
+          <div class="blog-img">
+            <img src="images/image6.jpg" alt="blog" />
+          </div>
+          <div class="blog-text">
+            <span>1 September 2024 / Jewelry</span>
+            <a href="http://127.0.0.1:5500/Home.html" class="blog-title"
+              >How to Measure Your Ring Size</a
+            >
+            <p>
+              Do you know your ring size? Shopping for rings (especially online)
+              can be a minefield if you don't know your size - and buying the
+              wrong sized ring can be frustrating and possibly expensive. So how
+              do you measure your ring size and feel confident that it's right?
+              It can be tricky to figure out, so we're here to help.
+              <span class="dots">...</span>
+              <span class="more-text" style="display: none">
+                If you're purchasing an expensive or highly sentimental ring
+                that you will be wearing every day, getting the size right is
+                especially important because you don't want to risk losing it or
+                finding it too tight to wear.
+              </span>
+            </p>
+            <a
+              href="javascript:void(0);"
+              onclick="toggleText(this)"
+              class="read-more"
+              >Read more</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <script>
+      function toggleText(linkElement) {
+        var blogText = linkElement.previousElementSibling;
+        var dots = blogText.querySelector(".dots");
+        var moreText = blogText.querySelector(".more-text");
+
+        if (moreText.style.display === "none") {
+          moreText.style.display = "inline";
+          dots.style.display = "none";
+          linkElement.innerHTML = "Read less";
+        } else {
+          moreText.style.display = "none";
+          dots.style.display = "inline";
+          linkElement.innerHTML = "Read more";
+        }
+      }
+    </script>
+  </body>
+</html>

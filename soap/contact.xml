@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contacts>
+    <contact Message="Hello">
+        <Name>New Age Jewels</Name>
+        <Email>Jewel@gmail.com</Email>
+        <dob>14/02/2008</dob>
+        <UserMessage>This is a sample text</UserMessage>
+    </contact>
+</Contacts>

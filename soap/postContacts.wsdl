@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<definitions name="PostContactsService"
+             targetNamespace="http://example.com/postContacts"
+             xmlns:tns="http://example.com/postContacts"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <message name="postContactsRequest">
+    <part name="contactsXml" type="xsd:string"/>
+  </message>
+
+  <message name="postContactsResponse">
+    <part name="return" type="xsd:string"/>
+  </message>
+
+  <portType name="PostContactsPortType">
+    <operation name="postContacts">
+      <input message="tns:postContactsRequest"/>
+      <output message="tns:postContactsResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="PostContactsBinding" type="tns:PostContactsPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="postContacts">
+      <soap:operation soapAction="postContacts"/>
+      <input>
+        <soap:body use="encoded" namespace="http://example.com/postContacts" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://example.com/postContacts" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+
+  <service name="PostContactsService">
+    <port name="PostContactsPort" binding="tns:PostContactsBinding">
+      <soap:address location="http://localhost/assignment/soap/postContacts.php"/>
+    </port>
+  </service>
+</definitions>

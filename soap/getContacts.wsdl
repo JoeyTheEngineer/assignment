@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="ContactsService"
+             targetNamespace="http://example.com/contacts"
+             xmlns:tns="http://example.com/contacts"
+             xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+             xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+             xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+             xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+  <types>
+    <xsd:schema targetNamespace="http://example.com/contacts">
+      <xsd:complexType name="Contact">
+        <xsd:all>
+          <xsd:element name="Name" type="xsd:string"/>
+          <xsd:element name="Email" type="xsd:string"/>
+          <xsd:element name="Message" type="xsd:string"/>
+        </xsd:all>
+      </xsd:complexType>
+
+      <xsd:complexType name="ContactList">
+        <xsd:sequence>
+          <xsd:element name="contacts" type="tns:Contact" minOccurs="0" maxOccurs="unbounded"/>
+        </xsd:sequence>
+      </xsd:complexType>
+    </xsd:schema>
+  </types>
+
+  <message name="getAllContactsRequest"/>
+  <message name="getAllContactsResponse">
+    <part name="return" type="tns:ContactList"/>
+  </message>
+
+  <portType name="ContactsPortType">
+    <operation name="getAllContacts">
+      <input message="tns:getAllContactsRequest"/>
+      <output message="tns:getAllContactsResponse"/>
+    </operation>
+  </portType>
+
+  <binding name="ContactsBinding" type="tns:ContactsPortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getAllContacts">
+      <soap:operation soapAction="getAllContacts"/>
+      <input>
+        <soap:body use="encoded" namespace="http://example.com/contacts" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://example.com/contacts" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+
+  <service name="ContactsService">
+    <port name="ContactsPort" binding="tns:ContactsBinding">
+      <soap:address location="http://localhost/assignment/soap/service.php"/>
+    </port>
+  </service>
+</definitions>
